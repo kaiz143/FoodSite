@@ -18,14 +18,11 @@
           <div class="detail-box">
             <div class="heading_container">
               <h2>
-                We Are Feane
+                F.A's Restaurant
               </h2>
             </div>
             <p>
-              There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
-              in some form, by injected humour, or randomised words which don't look even slightly believable. If you
-              are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in
-              the middle of text. All
+             At F.A's, we are your trusted partner for all your food supply needs, offering a wide range of high-quality products, from fresh produce and dairy to premium meats and pantry staples. We work closely with farmers and distributors to ensure top-notch ingredients at competitive prices. Our mission is to provide reliable service with a focus on quality, sustainability, and customer satisfaction. Whether you're running a restaurant, cafe, or catering business, our dedicated team is here to support you with timely deliveries, personalized service, and expert advice. Let us help you create exceptional culinary experiences!
             </p>
             <a href="">
               Read More

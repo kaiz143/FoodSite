@@ -211,13 +211,13 @@
             <div class="box">
               <div class="detail-box">
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+                The quality of ingredients from F.A's is outstanding, and their delivery is always punctual. They’ve made managing my restaurant so much easier!
                 </p>
                 <h6>
-                  Moana Michell
+                  Ilhan Madni
                 </h6>
                 <p>
-                  magna aliqua
+                  Nagpur
                 </p>
               </div>
               <div class="img-box">
@@ -229,13 +229,13 @@
             <div class="box">
               <div class="detail-box">
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+                  F.A's Restaurant offers an impressive variety of fresh products, and their customer service is top-notch. They've been essential to my catering business's success!
                 </p>
                 <h6>
-                  Mike Hamell
+                  Sunchit Chawla
                 </h6>
                 <p>
-                  magna aliqua
+                  Nagpur
                 </p>
               </div>
               <div class="img-box">

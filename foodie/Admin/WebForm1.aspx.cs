@@ -7,17 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace foodie.Admin
 {
-    public partial class Site1 : System.Web.UI.MasterPage
+    public partial class WebForm1 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
-        }
-
-        protected void lbLogout_Click(object sender, EventArgs e)
-        {
-            Session.Abandon();
-            Response.Redirect("../User/Login.aspx");
         }
     }
 }

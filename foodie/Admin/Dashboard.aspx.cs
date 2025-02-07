@@ -11,7 +11,14 @@ namespace foodie.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                Session["breadCrum"] = "";
+                if (Session["admin"] == null)
+                {
+                    Response.Redirect("../User/Login.aspx");
+                }
+            }
         }
     }
 }
