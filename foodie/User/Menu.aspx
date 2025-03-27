@@ -20,7 +20,7 @@
 
                 <asp:Repeater ID="rCategory" runat="server">
                     <ItemTemplate>
-                          <li data-filter=".<%# Eval("Name").ToString().ToLower() %>"><%# Eval("Name") %></li>
+                          <li data-filter=".<%# Regex.Replace(Eval("Name").ToString().ToLower(),@"\s+","") %>"><%# Eval("Name") %></li>
                     </ItemTemplate>
                 </asp:Repeater>
 
@@ -32,7 +32,7 @@
                     <asp:Repeater ID="rProducts" runat="server">
                         <ItemTemplate>
 
-                            <div class="col-sm-6 col-lg-4 all <%# Eval("Name").ToString().ToLower() %>">
+                            <div class="col-sm-6 col-lg-4 all <%# Regex.Replace(Eval("CategoryName").ToString().ToLower(),@"\s+","") %>">
                                 <div class="box">
                                     <div>
                                         <div class="img-box">
