@@ -8,8 +8,72 @@ function getYear() {
 getYear();
 
 
-// isotope js
+//// isotope js
+//$(window).on('load', function () {
+//    $('.filters_menu li').click(function () {
+//        $('.filters_menu li').removeClass('active');
+//        $(this).addClass('active');
+
+//        var data = $(this).attr('data-filter');
+//        $grid.isotope({
+//            filter: data
+//        })
+//    });
+
+//    var $grid = $(".grid").isotope({
+//        itemSelector: ".all",
+//        percentPosition: false,
+//        masonry: {
+//            columnWidth: ".all"
+//        }
+//    })
+
+//    $(document).ready(function () {
+//        // Read a page's GET URL variables & return them as an associative array.
+//        function getUrlVars() {
+//            var vars = [], hash;
+//            var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+//            for (var i = 0; i < hashes.length; i++) {
+//                hash = hashes[i].split('=');
+//                vars.push(hash[0]);
+//                vars[hash[0]] = hash[1];
+//            }
+//            return vars;
+//        };
+
+//        var id = getUrlVars()["id"];
+//        if (id > 0) {
+//            $('.filters_menu li').removeClass('active');
+//        }
+//    });
+//    $('.filters_menu li').each(function () {
+//        // Checks if it is the same on the address bar
+//        if (id == this.attributes["data-id"].value) {
+//            $(this).closest("li").addClass("active");
+//        }
+
+//        var data = $(this).attr('data-filter');
+//        $grid.isotope({
+//            filter: data
+//        })
+
+//        return;
+//    });
+
+
+//});
+
+// nice select
+
 $(window).on('load', function () {
+    var $grid = $(".grid").isotope({
+        itemSelector: ".all",
+        percentPosition: false,
+        masonry: {
+            columnWidth: ".all"
+        }
+    });
+
     $('.filters_menu li').click(function () {
         $('.filters_menu li').removeClass('active');
         $(this).addClass('active');
@@ -17,19 +81,43 @@ $(window).on('load', function () {
         var data = $(this).attr('data-filter');
         $grid.isotope({
             filter: data
-        })
+        });
     });
 
-    var $grid = $(".grid").isotope({
-        itemSelector: ".all",
-        percentPosition: false,
-        masonry: {
-            columnWidth: ".all"
+    $(document).ready(function () {
+        // Read a page's GET URL variables & return them as an associative array.
+        function getUrlVars() {
+            var vars = [], hash;
+            var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+            for (var i = 0; i < hashes.length; i++) {
+                hash = hashes[i].split('=');
+                vars.push(hash[0]);
+                vars[hash[0]] = hash[1];
+            }
+            return vars;
         }
-    })
+
+        var id = getUrlVars()["id"];
+        if (id && parseInt(id) > 0) {
+            $('.filters_menu li').removeClass('active');
+        }
+
+        $('.filters_menu li').each(function () {
+            var dataId = $(this).attr("data-id");
+            if (id == dataId) {
+                $(this).addClass("active");
+
+                var data = $(this).attr('data-filter');
+                $grid.isotope({
+                    filter: data
+                });
+                return false; // Stop loop if found
+            }
+        });
+    });
 });
 
-// nice select
+
 $(document).ready(function() {
     $('select').niceSelect();
   });

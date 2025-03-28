@@ -11,16 +11,20 @@
     <section class="food_section layout_padding">
         <div class="container">
             <div class="heading_container heading_center">
+                <div class="align-self-end">
+                    <asp:Label ID="lblMsg" runat="server" visible="false"></asp:Label>
+                </div>
                 <h2>Our Menu
                 </h2>
             </div>
 
             <ul class="filters_menu">
-                <li class="active" data-filter="*">All</li>
+                <li class="active" data-filter="*" data-id="0">All</li>
 
-                <asp:Repeater ID="rCategory" runat="server">
+                <asp:Repeater ID="rCategory" runat="server" OnItemCommand="rCategory_ItemCommand">
                     <ItemTemplate>
-                          <li data-filter=".<%# Regex.Replace(Eval("Name").ToString().ToLower(),@"\s+","") %>"><%# Eval("Name") %></li>
+                          <li data-filter=".<%# Regex.Replace(Eval("Name").ToString().ToLower(),@"\s+","") %>"
+                              data-id="<%# Eval("CategoryId") %>"><%# Eval("Name") %></li>
                     </ItemTemplate>
                 </asp:Repeater>
 
@@ -29,7 +33,7 @@
             <div class="filters-content">
                 <div class="row grid">
 
-                    <asp:Repeater ID="rProducts" runat="server">
+                    <asp:Repeater ID="rProducts" runat="server" OnItemCommand="rProducts_ItemCommand1">
                         <ItemTemplate>
 
                             <div class="col-sm-6 col-lg-4 all <%# Regex.Replace(Eval("CategoryName").ToString().ToLower(),@"\s+","") %>">
