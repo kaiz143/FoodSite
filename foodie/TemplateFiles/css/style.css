@@ -6,6 +6,69 @@ body {
   overflow-x: hidden;
 }
 
+/* Updated For Product Quantity Increasing & Decreasing */
+.product__details__option {
+    overflow: hidden;
+}
+
+    /* Quantity Section */
+    .product__details__option .quantity {
+        overflow: hidden;
+        float: left;
+        margin-right: 20px;
+    }
+
+    /* Container for the Quantity Box */
+    .product__details__option .pro-qty {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 50px;
+        width: 140px;
+        border: 1px solid #e1e1e1;
+        border-radius: 5px;
+        padding: 0 5px;
+        background-color: #fff;
+    }
+
+        /* Buttons for Increment and Decrement */
+        .product__details__option .pro-qty .qtybtn {
+            font-size: 18px;
+            width: 30px;
+            height: 100%;
+            line-height: 48px;
+            cursor: pointer;
+            font-weight: 600;
+            text-align: center;
+        }
+
+            /* Decrement Button (Left Side) */
+            .product__details__option .pro-qty .qtybtn.dec {
+                color: #888888;
+                order: 1;
+            }
+
+            /* Increment Button (Right Side) */
+            .product__details__option .pro-qty .qtybtn.inc {
+                color: #111111;
+                order: 3;
+            }
+
+        /* Quantity Input Box */
+        .product__details__option .pro-qty input {
+            border: none;
+            height: 100%;
+            width: 50px;
+            font-size: 16px;
+            font-weight: 600;
+            color: #111111;
+            text-align: center;
+            order: 2; /* Keeps the input in the middle */
+            outline: none;
+            background-color: transparent;
+        }
+
+
 .layout_padding {
   padding: 90px 0;
 }
